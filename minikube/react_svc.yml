@@ -1,0 +1,50 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2020-11-08T07:25:39Z"
+  labels:
+    app: react
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app: {}
+      f:spec:
+        f:externalTrafficPolicy: {}
+        f:ports:
+          .: {}
+          k:{"port":3000,"protocol":"TCP"}:
+            .: {}
+            f:port: {}
+            f:protocol: {}
+            f:targetPort: {}
+        f:selector:
+          .: {}
+          f:app: {}
+        f:sessionAffinity: {}
+        f:type: {}
+    manager: kubectl-expose
+    operation: Update
+    time: "2020-11-08T07:25:39Z"
+  name: react-svc
+  namespace: default
+  resourceVersion: "1538"
+  selfLink: /api/v1/namespaces/default/services/react-svc
+  uid: 13d697ae-2899-4ce7-b1f8-71a231bb1b02
+spec:
+  clusterIP: 10.97.242.17
+  externalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 32154
+    port: 3000
+    protocol: TCP
+    targetPort: 3000
+  selector:
+    app: react
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}

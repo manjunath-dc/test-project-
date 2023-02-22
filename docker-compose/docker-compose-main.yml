@@ -1,0 +1,16 @@
+version: '2'
+services:
+  reacts-app:
+    restart: always
+    build: ../sys-stats
+    ports:
+      - "3000:3000"
+  python-app:
+    restart: always
+    build: ../api/
+    ports:
+      - "5000:5000"
+networks:
+  default:
+    external:
+      name: app-network
