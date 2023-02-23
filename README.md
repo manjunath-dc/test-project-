@@ -1,6 +1,6 @@
 # Test Project
 
-#Code Walkthrough
+# Code Walkthrough
 
 For the Dockization of a simple Python–Flask web Application, I have created 3 separate containers based on the requirement mentioned by Red Acre team.
 # (Task 1)
@@ -47,7 +47,7 @@ After that expose the node port using these commands
 
 “Kubectl expose deployment react-deployment  --type=NodePort  --port=3000 –name react-svc -o yml > python_svc.yml”
 
-8. # To Run Ingress 
+8.To Run Ingress 
 “Kubectl create -f ingress.yml”
 
 # (Task 2)
