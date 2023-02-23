@@ -1,0 +1,2 @@
+#TO build the docker image run the below command
+#docker build -t my_react_app:0.1 .
